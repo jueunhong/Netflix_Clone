@@ -1,3 +1,4 @@
+import 'package:netflix/screen/home_screen.dart';
 import 'package:netflix/widget/bottom_bar.dart';
 
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.black,
+        // colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.white),
       ),
       home: DefaultTabController(
         length: 4,
@@ -23,10 +25,22 @@ class _MyAppState extends State<MyApp> {
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),
             children: <Widget>[
-              Container(),
-              Container(),
-              Container(),
-              Container(),
+              HomeScreen(),
+              Container(
+                child: Center(
+                  child: Text('search'),
+                ),
+              ),
+              Container(
+                child: Center(
+                  child: Text('save'),
+                ),
+              ),
+              Container(
+                child: Center(
+                  child: Text('more'),
+                ),
+              ),
             ],
           ),
           bottomNavigationBar: Bottom(),
