@@ -141,6 +141,21 @@ class _DetailScreenState extends State<DetailScreen> {
                           ),
                         ],
                       )),
+                    ),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Container(
+                          child: Column(
+                        children: <Widget>[
+                          Icon(Icons.send),
+                          Padding(padding: EdgeInsets.all(5)),
+                          Text(
+                            '공유',
+                            style:
+                                TextStyle(fontSize: 11, color: Colors.white60),
+                          ),
+                        ],
+                      )),
                     )
                   ],
                 ),
